@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/saurabhpan98/coronastats.git/static/css/main.50b664b2.chunk.css",
+    "main.js": "/saurabhpan98/coronastats.git/static/js/main.021f3cc1.chunk.js",
+    "main.js.map": "/saurabhpan98/coronastats.git/static/js/main.021f3cc1.chunk.js.map",
+    "runtime-main.js": "/saurabhpan98/coronastats.git/static/js/runtime-main.d9075ee6.js",
+    "runtime-main.js.map": "/saurabhpan98/coronastats.git/static/js/runtime-main.d9075ee6.js.map",
+    "static/js/2.c267beed.chunk.js": "/saurabhpan98/coronastats.git/static/js/2.c267beed.chunk.js",
+    "static/js/2.c267beed.chunk.js.map": "/saurabhpan98/coronastats.git/static/js/2.c267beed.chunk.js.map",
+    "index.html": "/saurabhpan98/coronastats.git/index.html",
+    "precache-manifest.5babe14296a0929e66a1addcd159086e.js": "/saurabhpan98/coronastats.git/precache-manifest.5babe14296a0929e66a1addcd159086e.js",
+    "service-worker.js": "/saurabhpan98/coronastats.git/service-worker.js",
+    "static/css/main.50b664b2.chunk.css.map": "/saurabhpan98/coronastats.git/static/css/main.50b664b2.chunk.css.map",
+    "static/js/2.c267beed.chunk.js.LICENSE.txt": "/saurabhpan98/coronastats.git/static/js/2.c267beed.chunk.js.LICENSE.txt",
+    "static/media/calling.svg": "/saurabhpan98/coronastats.git/static/media/calling.0f2fb1f6.svg",
+    "static/media/cover cough.svg": "/saurabhpan98/coronastats.git/static/media/cover cough.095a1cc7.svg",
+    "static/media/doctor.svg": "/saurabhpan98/coronastats.git/static/media/doctor.3d36874b.svg",
+    "static/media/social distancing.svg": "/saurabhpan98/coronastats.git/static/media/social distancing.d05a3b46.svg",
+    "static/media/stay home.svg": "/saurabhpan98/coronastats.git/static/media/stay home.58fb1363.svg",
+    "static/media/wash hands.svg": "/saurabhpan98/coronastats.git/static/media/wash hands.c3c4c6a0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d9075ee6.js",
+    "static/js/2.c267beed.chunk.js",
+    "static/css/main.50b664b2.chunk.css",
+    "static/js/main.021f3cc1.chunk.js"
+  ]
+}
