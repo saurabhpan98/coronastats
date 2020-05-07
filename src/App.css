@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 .App-logo {
@@ -35,4 +36,40 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/*---------------My styling -------------- */
+.home-top{
+  /*background: linear-gradient(to top right, blue, skyblue);
+  border-bottom-right-radius: 5%;
+  border-bottom-left-radius: 5%;
+  color: white;*/ 
+}
+
+.symptoms .col-4 .shadow{
+  border-radius: 10px;
+}
+
+.symptoms img{
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.preventions .col-sm-4 .shadow{
+  height: 100%;
+  border-radius: 10px;
+}
+
+.preventions img{
+  max-height: 100px;
+  max-width: 200px;
+}
+
+.country-select{
+  border-radius: 12px;
+  max-width: 300px;
+}
+
+.stats{
+  border-radius: 10px;
 }
