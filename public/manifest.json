@@ -17,6 +17,21 @@
       "type": "image/png",
       "sizes": "128x128"
     }
+    {
+      "src": "/icons/doctor-icon-152x152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "/icons/doctor-icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/doctor-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
   ],
   "start_url": ".",
   "display": "standalone",
