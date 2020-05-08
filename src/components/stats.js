@@ -45,7 +45,21 @@ class Stats extends Component {
             deaths: 0,
             recovered: 0
         })
-        axios.get('https://covid19.mathdro.id/api/countries/' + event.target.value)
+        if(event.target.value == "Worldwide"){
+            axios.get('https://covid19.mathdro.id/api')
+            .then(res =>{
+                this.setState({
+                    confirmed: res.data.confirmed.value,
+                    deaths: res.data.deaths.value,
+                    recovered: res.data.recovered.value
+                });
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+        }
+        else{
+            axios.get('https://covid19.mathdro.id/api/countries/' + event.target.value)
             .then(res => {
                 this.setState({
                     confirmed: res.data.confirmed.value,
@@ -56,6 +70,7 @@ class Stats extends Component {
             .catch((err) => {
                 console.log(err)
             })
+        }     
     }
 
     render() {
