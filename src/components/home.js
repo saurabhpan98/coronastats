@@ -112,6 +112,7 @@ const Home = () =>{
                     </div>
                 </div>
             </div>
+            <p className = "text-center">Made by Saurabh Panchal, 2020</p>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import CountUp from 'react-countup';
 
 class Stats extends Component {
     state = {
@@ -10,43 +11,57 @@ class Stats extends Component {
     }
 
     componentDidMount(){
-        axios.get('https://api.covid19api.com/summary')
-            .then(res => {
+        axios.get('https://covid19.mathdro.id/api')
+            .then(res =>{
                 this.setState({
-                    confirmed: res.data.Global.TotalConfirmed,
-                    deaths: res.data.Global.TotalDeaths,
-                    recovered: res.data.Global.TotalRecovered
+                    confirmed: res.data.confirmed.value,
+                    deaths: res.data.deaths.value,
+                    recovered: res.data.recovered.value
                 });
             })
-        axios.get('https://api.covid19api.com/countries')
+            .catch((err) => {
+                console.log(err)
+            })
+        
+        axios.get('https://covid19.mathdro.id/api/countries')
             .then(res => {
-                let countries = [];
-                res.data.forEach((country) => {
-                    countries.push({Country: country.Country, Slug: country.Slug});
-                })
-
-                this.setState({
-                    countries: countries
+                let array = [];
+                res.data.countries.forEach(country => {
+                    array.push(country.name)
                 });
+                this.setState({
+                    countries: array
+                });
+            })
+            .catch((err) => {
+                console.log(err)
             })
 
     }
 
     handleChange = (event) =>{
-        axios.get('https://api.covid19api.com/live/country/' + event.target.value)
+        this.setState({
+            confirmed: 0,
+            deaths: 0,
+            recovered: 0
+        })
+        axios.get('https://covid19.mathdro.id/api/countries/' + event.target.value)
             .then(res => {
                 this.setState({
-                    confirmed: res.data[res.data.length-1].Confirmed,
-                    deaths: res.data[res.data.length-1].Deaths,
-                    recovered: res.data[res.data.length-1].Recovered,
+                    confirmed: res.data.confirmed.value,
+                    deaths: res.data.deaths.value,
+                    recovered: res.data.recovered.value
                 });
+            })
+            .catch((err) => {
+                console.log(err)
             })
     }
 
     render() {
         const CountriesList = this.state.countries.map((country) => {
             return (
-                <option value = {country.Slug} key = {country.Slug}>{country.Country}</option>
+                <option value = {country} key = {country}>{country}</option>
             )
                 
         })
@@ -64,23 +79,29 @@ class Stats extends Component {
                     {CountriesList}
                 </select>
                 <h5 className = "text-left mt-4 font-weight-bold">Case update</h5>
-                <small className = "text-left d-block">Newest update on {months[month]} {date}, {year}</small>
+                    <small className = "text-left d-block">Last update on {months[month]} {date}, {year}</small>
                 <div className = "row shadow stats mt-3 py-3">
                     <div className = "col-sm-4 p-2 pb-3">
                         <div className = "infected">
-                            <h2 className = "text-warning">{this.state.confirmed}</h2>
+                            <h2 className = "text-warning">
+                                <CountUp start = {0} end = {this.state.confirmed} duration = {2.5} separator = "," />
+                            </h2>
                             <span className = "text-muted">Infected</span>
                         </div>
                     </div>
                     <div className = "col-sm-4 p-2 pb-3">
                         <div className = "deaths">
-                            <h2 className = "text-danger">{this.state.deaths}</h2>
+                            <h2 className = "text-danger">
+                                <CountUp start = {0} end = {this.state.deaths} duration = {2.5} separator = "," />
+                            </h2>
                             <span className = "text-muted">Deaths</span>
                         </div>
                     </div>
                     <div className = "col-sm-4 p-2 pb-3">
                         <div className = "recovered">
-                            <h2 className = "text-success">{this.state.recovered}</h2>
+                            <h2 className = "text-success">
+                                <CountUp start = {0} end = {this.state.recovered} duration = {2.5} separator = "," />
+                            </h2>
                             <span className = "text-muted">Recovered</span>
                         </div>
                     </div>
