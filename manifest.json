@@ -3,32 +3,32 @@
   "name": "COVID19 Stats",
   "icons": [
     {
-      "src": "/icons/doctor-icon-72x72.png",
+      "src": "./icons/doctor-icon-72x72.png",
       "type": "image/png",
       "sizes": "72x72"
     },
     {
-      "src": "/icons/doctor-icon-96x96.png",
+      "src": "./icons/doctor-icon-96x96.png",
       "type": "image/png",
       "sizes": "96x96"
     },
     {
-      "src": "/icons/doctor-icon-128x128.png",
+      "src": "./icons/doctor-icon-128x128.png",
       "type": "image/png",
       "sizes": "128x128"
     },
     {
-      "src": "/icons/doctor-icon-152x152.png",
+      "src": "./icons/doctor-icon-152x152.png",
       "type": "image/png",
       "sizes": "152x152"
     },
     {
-      "src": "/icons/doctor-icon-192x192.png",
+      "src": "./icons/doctor-icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/icons/doctor-icon-512x512.png",
+      "src": "./icons/doctor-icon-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
