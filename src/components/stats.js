@@ -45,7 +45,7 @@ class Stats extends Component {
             deaths: 0,
             recovered: 0
         })
-        if(event.target.value == "Worldwide"){
+        if(event.target.value === "Worldwide"){
             axios.get('https://covid19.mathdro.id/api')
             .then(res =>{
                 this.setState({
