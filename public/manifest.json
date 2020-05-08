@@ -1,6 +1,6 @@
 {
-  "short_name": "Corona Stats",
-  "name": "Corona Stats",
+  "short_name": "COVID19 Stats",
+  "name": "COVID19 Stats",
   "icons": [
     {
       "src": "favicon.ico",
@@ -18,9 +18,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "white",
-  "theme_color": "white",
+  "theme_color": "#0275d8",
   "orientation": "portrait-primary"
 }

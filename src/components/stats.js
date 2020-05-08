@@ -4,9 +4,9 @@ import CountUp from 'react-countup';
 
 class Stats extends Component {
     state = {
-        confirmed: null,
-        deaths: null,
-        recovered: null,
+        confirmed: 0,
+        deaths: 0,
+        recovered: 0,
         countries: []
     }
 
